@@ -1,0 +1,95 @@
+﻿#accordion-resizer {
+    padding: 10px;
+    width: 95%;
+    height: 420px;
+}
+
+span.re{
+    background: none repeat scroll 0% 0% rgb(255, 183, 183);
+}
+
+img.eventTitle
+{
+    border-style: ridge; 
+    border-width: medium; 
+    padding: 2px; 
+    margin: 2px;    
+    width: 95%;
+}
+
+div.eventHeader
+{
+    text-align:center;
+    color:Red;
+    font-size:18px;
+    font-weight:bold    
+}
+
+div.updateHeader
+{
+    margin: 5px 5px 5px 40px;
+    padding: 3px 5px 3px 5px;
+    background: yellow;
+    font-family:Arial Rounded MT Bold;
+    font-size:large;
+    color: Red;
+}
+.eventHeader
+{
+    text-align:center;
+    color:Red;
+    font-size:20px;
+    font-weight:bold    
+}
+
+td.content
+{
+    padding: 0px 5px 5px 5px;
+    margin: 0px 3px 5px 3px;
+    text-align: left;
+    word-spacing: 5px;
+    line-height: 145%;
+}
+
+img.picture
+{
+    margin: -5px 5px 0px 0px;
+    position: relative;
+}
+
+.floatstop  {
+	clear:both;
+}
+
+#eventlist {  }
+#eventlist ul  
+{
+    list-style:none; 
+}
+
+#eventlist ul li  
+{
+    font-family:Georgia,serif,Times; font-size:18px; 
+}
+
+#eventlist ul li a  
+{
+    display:block; 
+    width:400px; 
+    height:28px; 
+    background-color:#333; 
+    border-left:5px solid #222; 
+    border-right:5px solid #222; 
+    padding-left:5px;
+  text-decoration:none; color:#bfe1f1; 
+}
+
+#eventlist ul li a:hover   
+{
+    -moz-transform:rotate(-5deg); 
+    -moz-box-shadow:10px 10px 20px #000000;
+    -webkit-transform:rotate(-5deg); 
+    -webkit-box-shadow:10px 10px 20px #000000;
+    transform:rotate(-5deg); 
+    box-shadow:10px 10px 20px #000000; 
+}
