@@ -17,6 +17,47 @@
             $('#newBoard').load('Events2018/2018NewBoard.html');
         });
     </script>
+    <style>
+        #banner {
+            background-image: linear-gradient(120deg, #91C4FF 0%, #F0F7FF 87%);
+            position: relative;
+            width: 100%;
+            height: 950px;
+        }
+  
+        #cloud-scroll {
+            background: url(http://9a2e1a2047765d2a004e-e6d2db425d8d4f2619e5cee56a48bcef.r55.cf2.rackcdn.com/clouds.png) repeat-x;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            position: absolute;
+            -webkit-animation: 900000s backgroundScroll infinite linear;
+            -moz-animation: 900000s backgroundScroll infinite linear;
+            -o-animation: 900000s backgroundScroll infinite linear;
+            -ms-animation: 900000s backgroundScroll infinite linear;
+            animation: 900000s backgroundScroll infinite linear;
+        }
+  
+        @-webkit-keyframes backgroundScroll {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -99999999px 0;
+            }
+        }
+  
+        @keyframes backgroundScroll {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: -99999999px 0;
+            }
+        }
+    </style>
 </head>
 <body vlink="#551A8B" text="#000000" link="#0000EE" bgcolor="#ffcc99"
       background="image/main-bg.png" alink="#EE0000">
@@ -27,12 +68,12 @@
                     <div class="shadow-sm p-3 mb-5 bg-white rounded">
                         <div class="card-header">
                             <div class="row">
-                                <div class="col-md-2">
+                                <div class="col-md-1">
                                     <img src="image/logo.png" width="100" height="100" />
                                 </div>
-                                <div class="col-md-8">
-                                    <p class="h4 display-4 text-success font-weight-bold">全美台灣同鄉會達拉斯分會</p>
-                                    <p class="h4 display-5 text-success font-weight-bold">Taiwanese Association Of America - DFW Chapter</p>
+                                <div class="col-md-9">
+                                    <p class="h4 display-4 text-success font-weight-bold  text-center">全美台灣同鄉會達拉斯分會</p>
+                                    <p class="h4 display-5 text-success font-weight-bold text-center">Taiwanese Association Of America - DFW Chapter</p>
                                 </div>
                                 <div class="col-md-2">
                                     <ul class="nav flex-column">
@@ -86,12 +127,11 @@
                                 <h2 class="card-title text-center align-center">Recent Activities <span class="badge badge-success">近期活動</span></h2>
                             </div>
                             <div class="row">
-                                <div class="col-12">
-                                    <div class="jumbotron">
+                                <div class="col-md-7">
                                         <div class="card">
                                             <div class="card-body">
                                                 <img src="Events2019/new-year-2019.jpg" class="img-responsive rounded float-md-right" height="200" width="200" />
-                                                <h2 class="card-title"><span class="badge badge-primary text-align-center">2019年農曆新年晚會</span></h2>
+                                                <h1 class="card-title"><span class="badge badge-danger text-center">2019年農曆新年晚會</span></h1>
                                                 <p class="card-text">親愛的同鄉朋友們：</p>
                                                 <p class="card-text">祝福大家新年快樂、豬事大吉！</p>
                                                 <p class="card-text">達福台灣同鄉會誠摯的邀請各位來參加 <span class="badge badge-danger">2019 年農曆新年晚會</span>！時間為<span class="badge badge-success">二月九日星期六下午五點整</span>，期待大家一起來歡喜團圓，聊天敘舊，享用豐盛美味的年菜，觀賞精彩可期的歌仔戲、說故事等等表演及聆聽耳熟能詳的台灣歌曲演唱，更不要錯過新春開運即時樂抽獎活動，大獎包含華航從洛杉磯到台北的機票及多個現金紅包，只要參加就可得到抽獎券至少一張，人人有機會抽到大獎！當晚無論中獎與否，同鄉會將贈送你（妳）一個 2019新年開運的紅包！</p>
@@ -122,6 +162,25 @@
                                                 <h4><span class="badge badge-info">線上報名</span></h4>
                                                 <p class="card-text"><a href="https://taadfw.wufoo.com/forms/m1g3ro4x1ag3vyz/">請按此</a></p>
                                             </div>
+                                        </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <h2><span class="badge badge-secondary">2019年 228紀念演講會</span></h2>
+                                    <h4><span class="badge badge-dark">『特務、黑道、二二八』</span></h4>
+                                    <ul>
+                                        <li><span class="badge badge-danger">時間</span>：2月22日（星期五）下午7點-10點</li>
+                                        <li><span class="badge badge-dark">地點</span>：逹拉斯台灣基督長老教會Taiwanese Presbyterian Church of Dallas (319 La Salle Dr., Richardson, TX 75081 ) </li>
+                                    </ul>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <p class="lead">今年是二二八事件七十二年，其實長期以來我們對二二八事件的了解非常有限。最近出爐的一些新的檔案，讓我們可以看到更多我們過去所不理解的統治手法。例如，戰後約在1945年9月，最早進到台灣的其實是國民黨政府裏的情治機關，他們部署全台，滲透各地。 利用台灣的黑社會，將他們安排在基層警員跟消防隊裏，甚至在台灣各處安置線民， 監視整個社會。在二二八事件裏，這些特務系統利用事件的發生來剷除台灣社會的精英，甚至在事件之後以新的名義編造黑名單，於是這些人成為被當局監控的對象。  </p>
+                                            <p class="lead">
+                                                這些新的資料顯示我們對二二八事件的理解其實還非常有限。然而，二二八事件是台灣近代史上犧牲最慘重的事件，這個事件對台灣社會造成什麽樣影響？我們應該更多多理解事件發生的過程，從中獲得一些啟示或教訓。
+                                                演講中陳敎授會觸及大家非常關心的”轉型正義” 近展。演講會前，現場會播放二二八事件的實况紀錄影片。機會難得，希望同鄉們踴躍參加，以免向隅！
+                                            </p>
+                                            <div class="badge badge-info">關於陳翠蓮教授：</div>
+                                            <img src="Events2019/51781197_2439481959451804_4089931492933763072_n.jpg" class="img-responsive rounded float-md-right" height="200" />
+                                            <div>陳教授現為台灣大學歷史學系教授，曾任自立晚報政治組記者、政治組主任及副總編輯、淡江大學公共行政學系副教授、主任以及政治大學台灣史研究所副教授、教授及所長。陳教授擁有台灣大學政治學系碩士及博士學位，其博士論文研究主題為「二二八事件研究」，她長期致力於二二八事件的真相還原及轉型正義的探討，著作有《派系鬥爭與權謀政治：二二八悲劇的另一面相》、《台灣人的抵抗與認同：一九二O—一九五O》、《百年追求：臺灣民主的故事（卷一 自治的夢想）》以及《重構二二八：戰後美中體制、中國統治模式與臺灣》。</div>
                                         </div>
                                     </div>
                                 </div>
