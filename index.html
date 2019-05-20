@@ -61,6 +61,40 @@
                 background-position: -99999999px 0;
             }
         }
+
+        @media screen and (max-width: 768px) {
+            .lead {
+                font-size:20px;
+            }
+        }
+ 
+        @media screen and (max-width: 568px) {
+            .lead {
+                font-size:0.8em;
+            }
+        }
+
+        html {
+            font-size: 1rem;
+        }
+
+        @include media-breakpoint-up(sm) {
+            html {
+                font-size: 1.2rem;
+            }
+        }
+
+        @include media-breakpoint-up(md) {
+            html {
+                font-size: 1.4rem;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            html {
+                font-size: 1.6rem;
+            }
+        }
     </style>
 </head>
 <body vlink="#551A8B" text="#000000" link="#0000EE" bgcolor="#ffcc99"
@@ -135,16 +169,108 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-title">
-                                        <h2 class="text-center"><span class="badge badge-info">2019 Taiwanese American Heritage Week: Shinergy Puppet Show</span></h2>
-                                    <div class="card-img-top">
-                                        <img src="Events2019/PuppetShow-6.png" class="img-responsive rounded mx-auto d-block img-thumbnail" height="500"/>
+                                        <h2 class="text-center">
+                                            2019 年春季野餐暨肉粽節活動
+                                        </h2>
                                     </div>
                                     <div class="card-body">
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mQjGg27vPhI" allowfullscreen></iframe>
-                                        </div>
+                                        <img src="Events2019/spring-picnic.png" class="img-responsive rounded float-md-left" height="200" style="margin-right: 10px;" />
+                                        <p class="lead">為了迎接一年一度的粽子節，粽情粽義的同鄉會理事會決定在溫暖和煦的春日(六月一日星期六)，舉辦春季野餐暨肉粽節活動。同鄉會將準備肉粽、台菜、西瓜及台式剉冰。地點訂在 Farmers Branch City Hall旁邊的公園。現場有兒童遊戲區、籃球及網球場、河邊步道等，非常適合全家大小以及親朋好友郊遊同樂，希望大家扶老攜幼，帶著隨身折疊椅和風箏、飛盤、籃球等各種戶外活動遊戲來參加！為愛護地球，也歡迎大家自備餐具！我們還是會準備免洗餐具跟便當盒。</p>
+                                        <br />
+                                        <img src="Events2019/watermelon.jpg" class="img-responsive rounded float-md-right" height="200" style="margin-left: 10px;" />
+                                        <ul>
+                                            <li><span class="badge badge-danger">WHEN 時間</span>：Saturday, 6/1/2019, 4:30 PM to 8:30 PM (六月一日星期六)</li>
+                                            <li><span class="badge badge-dark">WHERE 地點</span>：Gussie Field Watterworth Park, next to Farmers Branch City Hall</li>
+                                            <li><span class="badge badge-info">ADDRESS 住址</span>: 2610 Valley View Lane, Farmers Branch, TX 75234</li>
+                                            <li><span class="badge badge-light">DIRECTION</span>: 2610 Valley View Lane (between Hwy 35 and Josey Lane).  On Valley View Lane, turn South onto William Dodson Pkwy when seeing “Farmers Branch City Hall sign”</li>
+                                            <li>
+                                                <span class="badge badge-primary">ACTIVITIES (活動)</span>:
+                                                <ul>
+                                                    <li>4:30 – 5:30 PM    Registration and Outdoor Activities</li>
+                                                    <li>5:30 PM               Dinner Begins</li>
+                                                    <li>6:30 – 8:30 PM    Social and Outdoor Activities</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <span class="badge badge-secondary">Event Fees (收費)</span>:
+                                                <ul>
+                                                    <li>2019 Members (2019會員): $15</li>
+                                                    <li>Non-Members (非會員): $20</li>
+                                                    <li>Students (學生): $10</li>
+                                                    <li>Kids 5 – 12 Years Old (小孩 5 – 12歲): $5</li>
+                                                    <li>Kids Younger than 5 Years Old (小於5 歲): Free</li>
+                                                </ul>
+                                            </li>
+                                            <img src="Events2019/shradeice-machine.png" class="img-responsive rounded float-md-right" height="250" style="margin-left: 10px;" />
+                                            <li>
+                                                <span class="badge badge-success">RSVP (報名)</span>:
+                                                <ul>
+                                                    <li><a href=" https://taadfw.wufoo.com/forms/q3elu9d06zqhfk/">網路報名</a></li>
+                                                    <li>電話報名:
+                                                        <ul>
+                                                            <li>蔡靜燦 (Sam) 972-342-8155</li>
+                                                            <li>蔡宇平 (Yuping) 469-675-3405</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                                <p class="lead">
+                                                    報名請在五月二十九日前，以便準備食物數量。如果你
+                                                    要素食及素肉粽, 請在報名時通知我們。
+                                                </p>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-title">
+                                        <h2 class="text-center">
+                                            <span class="lead badge badge-danger">2019 Taiwanese American<br /> Heritage Week</span>
+                                        </h2>
+                                        <h2 class="text-center">
+                                            <span class="badge badge-success">Shinergy Puppet Show</span>
+                                        </h2>
+                                        <h3 class="text-center">
+                                            <span class="badge badge-info">活動報告</span>
+                                        </h3>
+                                        <div class="card-body">
+                                            <p class="lead">五月四日，2019 台灣傳統週訪團「新勝景掌中劇團」一行十三人帶著大批器材，浩浩蕩蕩抵達達拉斯，這是此行的第二站，也是唯一住宿鄉親家中的一站，接待家庭忙著接機與招待。 第二天一早隨即展開長達六小時的裝台，同鄉會義工始終駐守會場協助訪團， 並將外場擺設妥當。 中途雖歷經投影機故障需緊急採購，但仍有驚無險地於下午二點前準備就緒 。</p>
+                                            <p class="lead">就在此時觀眾陸續抵達會場，在預計開門的二點半前已聚集了近百名觀眾，很快地場內約三百席座位已是座無虛席，但是場外仍有約三百人引領而盼 。礙於規定，演藝廳廳長湯姆事前並不同意有站席，但眼見盛況空前他破例開放了ㄧ百名站位。已關上的門又重新打開，群眾帶著興奮的表情湧入，很快地演藝廳後面及兩旁都站滿了人， 但會場秩序良好無人推擠喧嘩。在辦事處陳處長致詞強調台美文化交流的重要之後，湯姆特意穿著紅色東方服飾並以中文問候觀眾，展現歡迎之意。</p>
+                                            <p class="lead">於是，世界首創光雕投影布袋戲「南俠ㄧ生傳」就在眾人的期盼中開演了！ 台灣知名的「夢想動畫」設計的光影，巧妙地將整個廟宇呈現在舞台上，廟宇下方ㄧ條活靈活現的龍不時舞動著身軀， 兩旁兩隻小獅頂著球玩不勝可愛。 中間上方則是布袋戲的舞台，戲偶大搖大擺地現身，操偶師以高超的技術加以巧妙的聲音表情，讓精緻的戲偶充分展現出不同的個性及動作，如：很帥的「千萬招」、 溫文儒雅的「文俠」，再加上不時來些煙霧、泡泡以及響炮等， 團隊合作的默契表露無遺。 在九十分鍾的精彩演出後， 操偶師們各自帶著約七十公分高的戲偶現身與觀眾互動、合照示範及解說。 操偶師私下表示見到觀眾中近半數是「老外」很高興， 因為可以將布袋戲不只介紹給鄉親也介紹給「老外」。「新勝景」帶來的小布袋戲偶也很吸睛， 裝有活動紀念衫及小戲偶的福袋，送出了近五十個。</p>
+                                            <p class="lead">場地整理乾淨後， 大夥到餐廳聚餐，疲憊的團員和義工終於可以放鬆心情談笑風生。 席間即興的口琴表演搭配未經彩排卻默契十足的合唱，ㄧ首首台灣名曲把氣氛帶到最高點，心意及理念盡在不言中流露。達福台灣同鄉會第一次協辦僑委會大型活動， 籌備過程戰戰兢兢但最後得以畫下溫馨的句點， 對此同鄉會義工深感欣慰。</p>
+                                            <p class="lead">謹以下方連結提供此次演出影片， 希望無法入場的鄉親也能有觀賞的機會，並期盼鄉親共同持續為家鄉台灣盡一份心力 。  </p>
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/OOxtYZiKgEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="card-img-top">
+                                            <a href="Events2019/PuppetShow-6.png" target="_blank">
+                                                <img src="Events2019/PuppetShow-6.png" class="img-responsive rounded mx-auto d-block img-thumbnail" height="500" />
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="lead">
+                                                為了尊重並感謝台美人的文化藝術、傳統、以及貢獻，美國國會在1999年，正式訂定每年五月的第三個禮拜，為台灣傳統週。台灣傳統週一直是僑界最備受期待的年度重點活動之一，每年都會從台灣徵選優質的表演團體來美國巡迴演出，巡演期間為期將近一個月，今年達拉斯是其中的一站。
+                                            </p>
+                                            <p class="lead">
+                                                今年邀請到的表演團體為台灣知名的新勝景掌中劇團為2019年台美人傳統週獻上精彩的布袋戲秀！新勝景掌中劇團讓沒落的傳統布袋戲，賦予了新的生命，也因應新世代潮流，他們將傳統的布袋戲與現代的動畫投影結合，並搭配光雕的新科技，設計出史無前例的『光雕投影布袋戲』，堪稱世界首例，劇團更採用了流行動感的搖滾樂，十足的將布袋戲多元化及年輕化，讓布袋戲文化再次活躍。
+                                            </p>
+                                            <p class="lead">
+                                                這次布袋戲的主題『南俠一生傳』，故事起源於武林幫派間的鬥爭打亂了武林之間的平衡，於是南俠挺身而出奔走江湖尋求各方支援，故事劇情就此展開。為了讓聽不懂台語的觀眾以及國際人士都能享受這場布袋戲，舞台會加上中英字幕，讓與會的觀眾了解劇情，劇團人員也將會在演出結束後，與台下觀眾互動，並帶來精緻的布袋戲偶贈與答題的觀眾。相信這場創新的布袋戲，將會帶給觀眾一場在視覺上以及聽覺上的享受。
+                                            </p>
+                                            <ul>
+                                                <li><span class="badge badge-danger">時間</span>：May 5th, 2019 (Sunday) 3:00 PM</li>
+                                                <li><span class="badge badge-dark">地點</span>：Civic Auditorium at Allen Public Library (300 N. Allen Dr., Allen, TX 75013)</li>
+                                            </ul>
+                                            <h2 class="badge badge-danger">免費入場 Free Admission</h2>
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mQjGg27vPhI" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
 
                             </div>
                         </div>
