@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <script>
         jQuery(document).ready(function ($) {
             $('#activity').load('Events2019/TaiwanRadicalWingsSpeech.html');
             $('#includedContent').load('Events2019/2019-Lunar-NewYear.html');
             $('#newBoard').load('Events2018/2018NewBoard.html');
+
+            var options = { valueNames: ['year', 'name'] };
+            var presidentList = new List('presidentList', options);
         });
     </script>
     <style>
@@ -64,13 +68,13 @@
 
         @media screen and (max-width: 768px) {
             .lead {
-                font-size:20px;
+                font-size: 20px;
             }
         }
- 
+
         @media screen and (max-width: 568px) {
             .lead {
-                font-size:0.8em;
+                font-size: 0.8em;
             }
         }
 
@@ -95,6 +99,27 @@
                 font-size: 1.6rem;
             }
         }
+
+        ol.list {
+            color: #ccc;
+            list-style-type: none;
+        }
+ 
+        ol.list li {
+            position: relative;
+            font: bold italic 20px/1.5 Helvetica, Verdana, sans-serif;
+            margin-bottom: 20px;
+        }
+ 
+        ol.list li p {
+            font: 20px/1.5 Helvetica, sans-serif;
+            padding-left: 60px;
+            color: #555;
+        }
+
+        ol.list li span {
+            position: absolute;
+        }
     </style>
 </head>
 <body vlink="#551A8B" text="#000000" link="#0000EE" bgcolor="#ffcc99"
@@ -117,8 +142,10 @@
                                     <ul class="nav flex-column">
                                         <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/taadfw">臉書粉絲頁</a></li>
                                         <li class="nav-item"><a class="nav-link" href="aboutUs.html">關於我們</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#newboard">理事名單</a></li>
                                         <li class="nav-item"><a class="nav-link" href="http://news.google.com.tw/news?pz=1&amp;cf=all&amp;ned=tw&amp;siidp=693cfee580f6a69efa731aa71d6d1324f7b7&amp;ict=ln">台灣新聞</a></li>
                                         <li class="nav-item"><a class="nav-link" href="">活動記錄</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="" data-toggle="modal" data-target="#exampleModalLong">歷任會長</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -159,430 +186,434 @@
                             </div>
                         </div>
                         <div class="card-body">
-                        <div class="alert alert-primary d-flex align-items-center justify-content-center" role="alert">
-                            <div style="color:Tomato">
-                                <i class="far fa-calendar-alt fa-2x" style="margin:0 30px 0 0"></i>
-                            </div>
-                            <h2 class="card-title text-center align-center">Recent Activities <span class="badge badge-success">近期活動</span></h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-7">
-                                <div class="card">
-                                    <div class="card-title">
-                                        <img src="Events2019/fapa.png" class="img-responsive rounded float-md-left" width="80" style=""/>
-                                        <h5 class="text-center">
-                                            <span class="badge badge-success">台灣人公共事務會(FAPA)北德州分會募款演講會</span>
-                                        </h5>
-                                        <h5 class="text-center"><span class="badge badge-info">-美中貿易戰及兩大國爭取世界霸權下對台灣的影嚮-</span></h5>
-                                        <h5 class="text-center">
-                                            <span class="badge badge-light">主講者:</span><span class="badge badge-primary">葉望輝 (Stephen J. Yates)</span>
-                                        </h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <img src="Events2019/StephenYates.jpg" class="img-responsive rounded float-md-right" width="200" style="margin: 10px" />
-                                        <p class="lead">台灣人公共事務會(FAPA)北德州分會訂於<mark><strong>2019年6 月22日下午2時</strong></mark>於達拉斯台心之家舉行2019年度募款演講會。</p>
-                                        <p class="lead">北德州分會今年邀請到葉望輝 (Steve Yates) 先生來演講, 主題是:美中貿易戰及兩大國爭取世界霸權下對台灣的影嚮。</p>
-                                        <p class="lead">葉望輝先生曾任美國副總統錢尼 (Dick Cheney) 亞洲政策的幕僚, 目前是台灣人公共事務會 (FAPA)的資深顧問。</p>
-                                        <p class="lead">
-                                            他說「台灣經驗開啟了我的心智，讓我對全球各地人民追求自由民主的決心都能感同身受，促使我想成為一個對亞洲國家的人民有所幫助的人」 身為一個摩門教青年曾在大二時(1987年) 11 月被派到台灣工作。在台灣的那兩年他親身經歷了台灣早期威權體制度下解禁的初期，接著又目睹了台灣民間不斷大聲疾呼追求言論集會自由等運動的感動。就決心投入亞洲事務研究, 為亞洲國家的民主轉型與鞏固來盡
-                                            一份心力。
-                                        </p>
-                                        <p class="lead">葉望輝先生的演講一定很精彩, 演講會備有茶點招待，入場免費, 歡迎所有愛䕶咱台灣的鄉親朋友擁躍參加。</p>
-                                        <ul>
-                                            <li><span class="badge badge-danger">WHEN 時間</span>：2 PM,  June 22,  2019 (Saturday)  六月二十二日(星期六) 下午兩點正</li>
-                                            <li><span class="badge badge-dark">WHERE 地點</span>：達拉斯台心之家</li>
-                                            <li><span class="badge badge-info">ADDRESS 住址</span>：Westgrove Plaza, 4222 Trinity Mills, #290, Dallas. Texas 75287</li>
-                                            <li><span class="badge badge-success">連絡 : </span>John Hsieh  972 624 8232      Sam Tsay  972 342 8155</li>
-                                        </ul>
-                                        <p class="lead">台灣人公共事務會是1982年在美國成立之非營利機構, 其總部設於華盛頓特區, 全美共有40多個分會, 以推動台灣的民主自由及主權獨立並參與國際社會為宗旨。FAPA經費全來自募款, 經費全來自募款，此次演講會歡迎大家踴躍捐款，捐款可以抵稅。若無法參加演講會，亦可將捐款支票抬頭註明「FAPA」，並寄至Dr. Kim Yang（Address: 1209 Queen Peggy Lane, Lewisville, TX 75056）。</p>
-                                    </div>
+                            <div class="alert alert-primary d-flex align-items-center justify-content-center" role="alert">
+                                <div style="color:Tomato">
+                                    <i class="far fa-calendar-alt fa-2x" style="margin:0 30px 0 0"></i>
                                 </div>
+                                <h2 class="card-title text-center align-center">Recent Activities <span class="badge badge-success">近期活動</span></h2>
                             </div>
-                            <div class="col-md-5">
-                                <div class="card">
-                                    <div class="card-title">
-                                        <img src="Events2019/natpaPNG.PNG" class="img-responsive rounded float-md-left" width="100%" style="margin-right: 10px;"/>
-                                        <h3 class="text-center">
-                                            <span class="badge badge-danger">北美洲台灣人教授協會聲明</span> - <span class="badge badge-success">冷靜面對民進黨總統初選</span>
-                                        </h3>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="lead">面對紛擾多時的民進黨初選以及緊接著的總統大選， 北美洲台灣人教授協會(NATPA)做以下幾點呼籲：</p>
-                                        <ol>
-                                            <li>
-                                                <p class="lead">
-                                                    本會呼籲海外台灣人團體不要涉入民進黨初選。兩位候選人都是台派最優秀的領導人才。 每個
-                                                    人依候選人的不同特質， 會有不同的喜好，台美人團體之中也有各種精湛的分析與看法，顯現
-                                                    台美人的多元與開放。 但以團體之名支持特定候選人， 會產生代表性問題，對不被該社團支持
-                                                    的候選人不公。 我們尤其擔心的是，已有不少台僑領袖在不知情或得到片面資訊的情況下加入
-                                                    連署。
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p class="lead">
-                                                    本會也呼籲民進黨中央承擔責任，勿讓初選紛爭的後遺症由候選人來承擔。 挑戰同黨現任總統
-                                                    連任，即使在美國也是極敏感的政治遊戲。 若無公平可行的初選辦法，必然引起紛爭。做為規
-                                                    則制定者與裁判者的民進黨中央， 實在應該先行規劃出一個合理的初選辦法； 出現狀況後， 也
-                                                    應盡力化解雙方角力， 以免損害兩位候選人美好的形象，兩敗俱傷。 如前所述，兩位候選人都
-                                                    是一時之選， 他們的能力與捍衛台灣的決心不容置疑， 都能夠帶領國人創造一個光明的台灣前
-                                                    途。
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p class="lead">
-                                                    本會也呼籲海外台灣人，多方接觸資訊並加以審慎的判斷。海外的台灣人一向關心台灣的政治
-                                                    發展，在獨立建國的大方向下有各樣不同的主張與路線， 應彼此尊重，也給予台派政府最大的
-                                                    支持。
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <p class="lead">
-                                                    本會更要呼籲所有海內外台灣人， 認清中國對台派分化的企圖。如眾所知 曾經有不友善國家屢
-                                                    屢透過媒體與社群網路， 散佈不實言論與新聞， 影響選舉，已讓俱有強大民主基礎的英、 美社
-                                                    會蒙上陰影。 對台無所不用其極的中國，會不思利用類似的伎倆來分化台派力量， 致使親痛仇
-                                                    快？ 我們能不警惕嗎？
-                                                </p>
-                                            </li>
-                                        </ol>
-                                        <p class="lead">
-                                            每次大選都是決定台灣前途的關鍵， 這次選舉更攸關台灣獨立自主或被中國蠶食併吞的命運。 顯然中國
-                                            的野心已按耐不住， 許多跡象顯得特別詭譎， 我們極須注意那隻中國的黑手。 我們忝為台灣人海外學界
-                                            一員，以最沉重的心情，呼籲海內外台灣人，團結所有推動台灣向前進步的力量， 認清我們共同的敵人，
-                                            同心協力， 為台灣前途打拼。
-                                        </p>
-                                        <h3><strong>北美洲台灣人教授協會</strong></h3>
-                                        <p class="lead">會長 蔡靜輝</p>
-                                        <p class="lead">副會長 葉耀元</p>
-                                        <p class="lead">
-                                            理事： 吳倍茂 徐新宏 陳敬銘 楊小娜 呂佳霙 陳慧玲 陳柏均
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <div class="card-title">
-                                        <h2 class="text-center">
-                                            2019 年春季野餐暨肉粽節活動
-                                        </h2>
-                                    </div>
-                                    <div class="card-body">
-                                        <img src="Events2019/spring-picnic.png" class="img-responsive rounded float-md-left" height="200" style="margin-right: 10px;" />
-                                        <p class="lead">為了迎接一年一度的粽子節，粽情粽義的同鄉會理事會決定在溫暖和煦的春日(六月一日星期六)，舉辦春季野餐暨肉粽節活動。同鄉會將準備肉粽、台菜、西瓜及台式剉冰。地點訂在 Farmers Branch City Hall旁邊的公園。現場有兒童遊戲區、籃球及網球場、河邊步道等，非常適合全家大小以及親朋好友郊遊同樂，希望大家扶老攜幼，帶著隨身折疊椅和風箏、飛盤、籃球等各種戶外活動遊戲來參加！為愛護地球，也歡迎大家自備餐具！我們還是會準備免洗餐具跟便當盒。</p>
-                                        <br />
-                                        <img src="Events2019/watermelon.jpg" class="img-responsive rounded float-md-right" height="200" style="margin-left: 10px;" />
-                                        <ul>
-                                            <li><span class="badge badge-danger">WHEN 時間</span>：Saturday, 6/1/2019, 4:30 PM to 8:30 PM (六月一日星期六)</li>
-                                            <li><span class="badge badge-dark">WHERE 地點</span>：Gussie Field Watterworth Park, next to Farmers Branch City Hall</li>
-                                            <li><span class="badge badge-info">ADDRESS 住址</span>: 2610 Valley View Lane, Farmers Branch, TX 75234</li>
-                                            <li><span class="badge badge-light">DIRECTION</span>: 2610 Valley View Lane (between Hwy 35 and Josey Lane).  On Valley View Lane, turn South onto William Dodson Pkwy when seeing “Farmers Branch City Hall sign”</li>
-                                            <li>
-                                                <span class="badge badge-primary">ACTIVITIES (活動)</span>:
-                                                <ul>
-                                                    <li>4:30 – 5:30 PM    Registration and Outdoor Activities</li>
-                                                    <li>5:30 PM               Dinner Begins</li>
-                                                    <li>6:30 – 8:30 PM    Social and Outdoor Activities</li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <span class="badge badge-secondary">Event Fees (收費)</span>:
-                                                <ul>
-                                                    <li>2019 Members (2019會員): $15</li>
-                                                    <li>Non-Members (非會員): $20</li>
-                                                    <li>Students (學生): $10</li>
-                                                    <li>Kids 5 – 12 Years Old (小孩 5 – 12歲): $5</li>
-                                                    <li>Kids Younger than 5 Years Old (小於5 歲): Free</li>
-                                                </ul>
-                                            </li>
-                                            <img src="Events2019/shradeice-machine.png" class="img-responsive rounded float-md-right" height="250" style="margin-left: 10px;" />
-                                            <li>
-                                                <span class="badge badge-success">RSVP (報名)</span>:
-                                                <ul>
-                                                    <li><a href=" https://taadfw.wufoo.com/forms/q3elu9d06zqhfk/">網路報名</a></li>
-                                                    <li>電話報名:
-                                                        <ul>
-                                                            <li>蔡靜燦 (Sam) 972-342-8155</li>
-                                                            <li>蔡宇平 (Yuping) 469-675-3405</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                                <p class="lead">
-                                                    報名請在五月二十九日前，以便準備食物數量。如果你
-                                                    要素食及素肉粽, 請在報名時通知我們。
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card">
-                                    <div class="card-title">
-                                        <h2 class="text-center">
-                                            <span class="lead badge badge-danger">2019 Taiwanese American<br /> Heritage Week</span>
-                                        </h2>
-                                        <h2 class="text-center">
-                                            <span class="badge badge-success">Shinergy Puppet Show</span>
-                                        </h2>
-                                        <h3 class="text-center">
-                                            <span class="badge badge-info">活動報告</span>
-                                        </h3>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="card">
+                                        <div class="card-title">
+                                            <img src="Events2019/fapa.png" class="img-responsive rounded float-md-left" width="80" style="" />
+                                            <h5 class="text-center">
+                                                <span class="badge badge-success">台灣人公共事務會(FAPA)北德州分會募款演講會</span>
+                                            </h5>
+                                            <h5 class="text-center"><span class="badge badge-info">-美中貿易戰及兩大國爭取世界霸權下對台灣的影嚮-</span></h5>
+                                            <h5 class="text-center">
+                                                <span class="badge badge-light">主講者:</span><span class="badge badge-primary">葉望輝 (Stephen J. Yates)</span>
+                                            </h5>
+                                        </div>
                                         <div class="card-body">
-                                            <p class="lead">五月四日，2019 台灣傳統週訪團「新勝景掌中劇團」一行十三人帶著大批器材，浩浩蕩蕩抵達達拉斯，這是此行的第二站，也是唯一住宿鄉親家中的一站，接待家庭忙著接機與招待。 第二天一早隨即展開長達六小時的裝台，同鄉會義工始終駐守會場協助訪團， 並將外場擺設妥當。 中途雖歷經投影機故障需緊急採購，但仍有驚無險地於下午二點前準備就緒 。</p>
-                                            <p class="lead">就在此時觀眾陸續抵達會場，在預計開門的二點半前已聚集了近百名觀眾，很快地場內約三百席座位已是座無虛席，但是場外仍有約三百人引領而盼 。礙於規定，演藝廳廳長湯姆事前並不同意有站席，但眼見盛況空前他破例開放了ㄧ百名站位。已關上的門又重新打開，群眾帶著興奮的表情湧入，很快地演藝廳後面及兩旁都站滿了人， 但會場秩序良好無人推擠喧嘩。在辦事處陳處長致詞強調台美文化交流的重要之後，湯姆特意穿著紅色東方服飾並以中文問候觀眾，展現歡迎之意。</p>
-                                            <p class="lead">於是，世界首創光雕投影布袋戲「南俠ㄧ生傳」就在眾人的期盼中開演了！ 台灣知名的「夢想動畫」設計的光影，巧妙地將整個廟宇呈現在舞台上，廟宇下方ㄧ條活靈活現的龍不時舞動著身軀， 兩旁兩隻小獅頂著球玩不勝可愛。 中間上方則是布袋戲的舞台，戲偶大搖大擺地現身，操偶師以高超的技術加以巧妙的聲音表情，讓精緻的戲偶充分展現出不同的個性及動作，如：很帥的「千萬招」、 溫文儒雅的「文俠」，再加上不時來些煙霧、泡泡以及響炮等， 團隊合作的默契表露無遺。 在九十分鍾的精彩演出後， 操偶師們各自帶著約七十公分高的戲偶現身與觀眾互動、合照示範及解說。 操偶師私下表示見到觀眾中近半數是「老外」很高興， 因為可以將布袋戲不只介紹給鄉親也介紹給「老外」。「新勝景」帶來的小布袋戲偶也很吸睛， 裝有活動紀念衫及小戲偶的福袋，送出了近五十個。</p>
-                                            <p class="lead">場地整理乾淨後， 大夥到餐廳聚餐，疲憊的團員和義工終於可以放鬆心情談笑風生。 席間即興的口琴表演搭配未經彩排卻默契十足的合唱，ㄧ首首台灣名曲把氣氛帶到最高點，心意及理念盡在不言中流露。達福台灣同鄉會第一次協辦僑委會大型活動， 籌備過程戰戰兢兢但最後得以畫下溫馨的句點， 對此同鄉會義工深感欣慰。</p>
-                                            <p class="lead">謹以下方連結提供此次演出影片， 希望無法入場的鄉親也能有觀賞的機會，並期盼鄉親共同持續為家鄉台灣盡一份心力 。  </p>
-                                            <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/OOxtYZiKgEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            <img src="Events2019/StephenYates.jpg" class="img-responsive rounded float-md-right" width="200" style="margin: 10px" />
+                                            <p class="lead">台灣人公共事務會(FAPA)北德州分會訂於<mark><strong>2019年6 月22日下午2時</strong></mark>於達拉斯台心之家舉行2019年度募款演講會。</p>
+                                            <p class="lead">北德州分會今年邀請到葉望輝 (Steve Yates) 先生來演講, 主題是:美中貿易戰及兩大國爭取世界霸權下對台灣的影嚮。</p>
+                                            <p class="lead">葉望輝先生曾任美國副總統錢尼 (Dick Cheney) 亞洲政策的幕僚, 目前是台灣人公共事務會 (FAPA)的資深顧問。</p>
+                                            <p class="lead">
+                                                他說「台灣經驗開啟了我的心智，讓我對全球各地人民追求自由民主的決心都能感同身受，促使我想成為一個對亞洲國家的人民有所幫助的人」 身為一個摩門教青年曾在大二時(1987年) 11 月被派到台灣工作。在台灣的那兩年他親身經歷了台灣早期威權體制度下解禁的初期，接著又目睹了台灣民間不斷大聲疾呼追求言論集會自由等運動的感動。就決心投入亞洲事務研究, 為亞洲國家的民主轉型與鞏固來盡
+                                                一份心力。
+                                            </p>
+                                            <p class="lead">葉望輝先生的演講一定很精彩, 演講會備有茶點招待，入場免費, 歡迎所有愛䕶咱台灣的鄉親朋友擁躍參加。</p>
+                                            <ul>
+                                                <li><span class="badge badge-danger">WHEN 時間</span>：2 PM,  June 22,  2019 (Saturday)  六月二十二日(星期六) 下午兩點正</li>
+                                                <li><span class="badge badge-dark">WHERE 地點</span>：達拉斯台心之家</li>
+                                                <li><span class="badge badge-info">ADDRESS 住址</span>：Westgrove Plaza, 4222 Trinity Mills, #290, Dallas. Texas 75287</li>
+                                                <li><span class="badge badge-success">連絡 : </span>John Hsieh  972 624 8232      Sam Tsay  972 342 8155</li>
+                                            </ul>
+                                            <p class="lead">台灣人公共事務會是1982年在美國成立之非營利機構, 其總部設於華盛頓特區, 全美共有40多個分會, 以推動台灣的民主自由及主權獨立並參與國際社會為宗旨。FAPA經費全來自募款, 經費全來自募款，此次演講會歡迎大家踴躍捐款，捐款可以抵稅。若無法參加演講會，亦可將捐款支票抬頭註明「FAPA」，並寄至Dr. Kim Yang（Address: 1209 Queen Peggy Lane, Lewisville, TX 75056）。</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="card">
+                                        <div class="card-title">
+                                            <img src="Events2019/natpaPNG.PNG" class="img-responsive rounded float-md-left" width="100%" style="margin-right: 10px;" />
+                                            <h3 class="text-center">
+                                                <span class="badge badge-danger">北美洲台灣人教授協會聲明</span> - <span class="badge badge-success">冷靜面對民進黨總統初選</span>
+                                            </h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="lead">面對紛擾多時的民進黨初選以及緊接著的總統大選， 北美洲台灣人教授協會(NATPA)做以下幾點呼籲：</p>
+                                            <ol>
+                                                <li>
+                                                    <p class="lead">
+                                                        本會呼籲海外台灣人團體不要涉入民進黨初選。兩位候選人都是台派最優秀的領導人才。 每個
+                                                        人依候選人的不同特質， 會有不同的喜好，台美人團體之中也有各種精湛的分析與看法，顯現
+                                                        台美人的多元與開放。 但以團體之名支持特定候選人， 會產生代表性問題，對不被該社團支持
+                                                        的候選人不公。 我們尤其擔心的是，已有不少台僑領袖在不知情或得到片面資訊的情況下加入
+                                                        連署。
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="lead">
+                                                        本會也呼籲民進黨中央承擔責任，勿讓初選紛爭的後遺症由候選人來承擔。 挑戰同黨現任總統
+                                                        連任，即使在美國也是極敏感的政治遊戲。 若無公平可行的初選辦法，必然引起紛爭。做為規
+                                                        則制定者與裁判者的民進黨中央， 實在應該先行規劃出一個合理的初選辦法； 出現狀況後， 也
+                                                        應盡力化解雙方角力， 以免損害兩位候選人美好的形象，兩敗俱傷。 如前所述，兩位候選人都
+                                                        是一時之選， 他們的能力與捍衛台灣的決心不容置疑， 都能夠帶領國人創造一個光明的台灣前
+                                                        途。
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="lead">
+                                                        本會也呼籲海外台灣人，多方接觸資訊並加以審慎的判斷。海外的台灣人一向關心台灣的政治
+                                                        發展，在獨立建國的大方向下有各樣不同的主張與路線， 應彼此尊重，也給予台派政府最大的
+                                                        支持。
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p class="lead">
+                                                        本會更要呼籲所有海內外台灣人， 認清中國對台派分化的企圖。如眾所知 曾經有不友善國家屢
+                                                        屢透過媒體與社群網路， 散佈不實言論與新聞， 影響選舉，已讓俱有強大民主基礎的英、 美社
+                                                        會蒙上陰影。 對台無所不用其極的中國，會不思利用類似的伎倆來分化台派力量， 致使親痛仇
+                                                        快？ 我們能不警惕嗎？
+                                                    </p>
+                                                </li>
+                                            </ol>
+                                            <p class="lead">
+                                                每次大選都是決定台灣前途的關鍵， 這次選舉更攸關台灣獨立自主或被中國蠶食併吞的命運。 顯然中國
+                                                的野心已按耐不住， 許多跡象顯得特別詭譎， 我們極須注意那隻中國的黑手。 我們忝為台灣人海外學界
+                                                一員，以最沉重的心情，呼籲海內外台灣人，團結所有推動台灣向前進步的力量， 認清我們共同的敵人，
+                                                同心協力， 為台灣前途打拼。
+                                            </p>
+                                            <h3><strong>北美洲台灣人教授協會</strong></h3>
+                                            <p class="lead">會長 蔡靜輝</p>
+                                            <p class="lead">副會長 葉耀元</p>
+                                            <p class="lead">
+                                                理事： 吳倍茂 徐新宏 陳敬銘 楊小娜 呂佳霙 陳慧玲 陳柏均
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-title">
+                                            <h2 class="text-center">
+                                                2019 年春季野餐暨肉粽節活動
+                                            </h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <img src="Events2019/spring-picnic.png" class="img-responsive rounded float-md-left" height="200" style="margin-right: 10px;" />
+                                            <p class="lead">為了迎接一年一度的粽子節，粽情粽義的同鄉會理事會決定在溫暖和煦的春日(六月一日星期六)，舉辦春季野餐暨肉粽節活動。同鄉會將準備肉粽、台菜、西瓜及台式剉冰。地點訂在 Farmers Branch City Hall旁邊的公園。現場有兒童遊戲區、籃球及網球場、河邊步道等，非常適合全家大小以及親朋好友郊遊同樂，希望大家扶老攜幼，帶著隨身折疊椅和風箏、飛盤、籃球等各種戶外活動遊戲來參加！為愛護地球，也歡迎大家自備餐具！我們還是會準備免洗餐具跟便當盒。</p>
+                                            <br />
+                                            <img src="Events2019/watermelon.jpg" class="img-responsive rounded float-md-right" height="200" style="margin-left: 10px;" />
+                                            <ul>
+                                                <li><span class="badge badge-danger">WHEN 時間</span>：Saturday, 6/1/2019, 4:30 PM to 8:30 PM (六月一日星期六)</li>
+                                                <li><span class="badge badge-dark">WHERE 地點</span>：Gussie Field Watterworth Park, next to Farmers Branch City Hall</li>
+                                                <li><span class="badge badge-info">ADDRESS 住址</span>: 2610 Valley View Lane, Farmers Branch, TX 75234</li>
+                                                <li><span class="badge badge-light">DIRECTION</span>: 2610 Valley View Lane (between Hwy 35 and Josey Lane).  On Valley View Lane, turn South onto William Dodson Pkwy when seeing “Farmers Branch City Hall sign”</li>
+                                                <li>
+                                                    <span class="badge badge-primary">ACTIVITIES (活動)</span>:
+                                                    <ul>
+                                                        <li>4:30 – 5:30 PM    Registration and Outdoor Activities</li>
+                                                        <li>5:30 PM               Dinner Begins</li>
+                                                        <li>6:30 – 8:30 PM    Social and Outdoor Activities</li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <span class="badge badge-secondary">Event Fees (收費)</span>:
+                                                    <ul>
+                                                        <li>2019 Members (2019會員): $15</li>
+                                                        <li>Non-Members (非會員): $20</li>
+                                                        <li>Students (學生): $10</li>
+                                                        <li>Kids 5 – 12 Years Old (小孩 5 – 12歲): $5</li>
+                                                        <li>Kids Younger than 5 Years Old (小於5 歲): Free</li>
+                                                    </ul>
+                                                </li>
+                                                <img src="Events2019/shradeice-machine.png" class="img-responsive rounded float-md-right" height="250" style="margin-left: 10px;" />
+                                                <li>
+                                                    <span class="badge badge-success">RSVP (報名)</span>:
+                                                    <ul>
+                                                        <li><a href=" https://taadfw.wufoo.com/forms/q3elu9d06zqhfk/">網路報名</a></li>
+                                                        <li>
+                                                            電話報名:
+                                                            <ul>
+                                                                <li>蔡靜燦 (Sam) 972-342-8155</li>
+                                                                <li>蔡宇平 (Yuping) 469-675-3405</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <p class="lead">
+                                                        報名請在五月二十九日前，以便準備食物數量。如果你
+                                                        要素食及素肉粽, 請在報名時通知我們。
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card">
+                                        <div class="card-title">
+                                            <h2 class="text-center">
+                                                <span class="lead badge badge-danger">2019 Taiwanese American<br /> Heritage Week</span>
+                                            </h2>
+                                            <h2 class="text-center">
+                                                <span class="badge badge-success">Shinergy Puppet Show</span>
+                                            </h2>
+                                            <h3 class="text-center">
+                                                <span class="badge badge-info">活動報告</span>
+                                            </h3>
+                                            <div class="card-body">
+                                                <p class="lead">五月四日，2019 台灣傳統週訪團「新勝景掌中劇團」一行十三人帶著大批器材，浩浩蕩蕩抵達達拉斯，這是此行的第二站，也是唯一住宿鄉親家中的一站，接待家庭忙著接機與招待。 第二天一早隨即展開長達六小時的裝台，同鄉會義工始終駐守會場協助訪團， 並將外場擺設妥當。 中途雖歷經投影機故障需緊急採購，但仍有驚無險地於下午二點前準備就緒 。</p>
+                                                <p class="lead">就在此時觀眾陸續抵達會場，在預計開門的二點半前已聚集了近百名觀眾，很快地場內約三百席座位已是座無虛席，但是場外仍有約三百人引領而盼 。礙於規定，演藝廳廳長湯姆事前並不同意有站席，但眼見盛況空前他破例開放了ㄧ百名站位。已關上的門又重新打開，群眾帶著興奮的表情湧入，很快地演藝廳後面及兩旁都站滿了人， 但會場秩序良好無人推擠喧嘩。在辦事處陳處長致詞強調台美文化交流的重要之後，湯姆特意穿著紅色東方服飾並以中文問候觀眾，展現歡迎之意。</p>
+                                                <p class="lead">於是，世界首創光雕投影布袋戲「南俠ㄧ生傳」就在眾人的期盼中開演了！ 台灣知名的「夢想動畫」設計的光影，巧妙地將整個廟宇呈現在舞台上，廟宇下方ㄧ條活靈活現的龍不時舞動著身軀， 兩旁兩隻小獅頂著球玩不勝可愛。 中間上方則是布袋戲的舞台，戲偶大搖大擺地現身，操偶師以高超的技術加以巧妙的聲音表情，讓精緻的戲偶充分展現出不同的個性及動作，如：很帥的「千萬招」、 溫文儒雅的「文俠」，再加上不時來些煙霧、泡泡以及響炮等， 團隊合作的默契表露無遺。 在九十分鍾的精彩演出後， 操偶師們各自帶著約七十公分高的戲偶現身與觀眾互動、合照示範及解說。 操偶師私下表示見到觀眾中近半數是「老外」很高興， 因為可以將布袋戲不只介紹給鄉親也介紹給「老外」。「新勝景」帶來的小布袋戲偶也很吸睛， 裝有活動紀念衫及小戲偶的福袋，送出了近五十個。</p>
+                                                <p class="lead">場地整理乾淨後， 大夥到餐廳聚餐，疲憊的團員和義工終於可以放鬆心情談笑風生。 席間即興的口琴表演搭配未經彩排卻默契十足的合唱，ㄧ首首台灣名曲把氣氛帶到最高點，心意及理念盡在不言中流露。達福台灣同鄉會第一次協辦僑委會大型活動， 籌備過程戰戰兢兢但最後得以畫下溫馨的句點， 對此同鄉會義工深感欣慰。</p>
+                                                <p class="lead">謹以下方連結提供此次演出影片， 希望無法入場的鄉親也能有觀賞的機會，並期盼鄉親共同持續為家鄉台灣盡一份心力 。  </p>
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OOxtYZiKgEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                            <div class="card-img-top">
+                                                <a href="Events2019/PuppetShow-6.png" target="_blank">
+                                                    <img src="Events2019/PuppetShow-6.png" class="img-responsive rounded mx-auto d-block img-thumbnail" height="500" />
+                                                </a>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="lead">
+                                                    為了尊重並感謝台美人的文化藝術、傳統、以及貢獻，美國國會在1999年，正式訂定每年五月的第三個禮拜，為台灣傳統週。台灣傳統週一直是僑界最備受期待的年度重點活動之一，每年都會從台灣徵選優質的表演團體來美國巡迴演出，巡演期間為期將近一個月，今年達拉斯是其中的一站。
+                                                </p>
+                                                <p class="lead">
+                                                    今年邀請到的表演團體為台灣知名的新勝景掌中劇團為2019年台美人傳統週獻上精彩的布袋戲秀！新勝景掌中劇團讓沒落的傳統布袋戲，賦予了新的生命，也因應新世代潮流，他們將傳統的布袋戲與現代的動畫投影結合，並搭配光雕的新科技，設計出史無前例的『光雕投影布袋戲』，堪稱世界首例，劇團更採用了流行動感的搖滾樂，十足的將布袋戲多元化及年輕化，讓布袋戲文化再次活躍。
+                                                </p>
+                                                <p class="lead">
+                                                    這次布袋戲的主題『南俠一生傳』，故事起源於武林幫派間的鬥爭打亂了武林之間的平衡，於是南俠挺身而出奔走江湖尋求各方支援，故事劇情就此展開。為了讓聽不懂台語的觀眾以及國際人士都能享受這場布袋戲，舞台會加上中英字幕，讓與會的觀眾了解劇情，劇團人員也將會在演出結束後，與台下觀眾互動，並帶來精緻的布袋戲偶贈與答題的觀眾。相信這場創新的布袋戲，將會帶給觀眾一場在視覺上以及聽覺上的享受。
+                                                </p>
+                                                <ul>
+                                                    <li><span class="badge badge-danger">時間</span>：May 5th, 2019 (Sunday) 3:00 PM</li>
+                                                    <li><span class="badge badge-dark">地點</span>：Civic Auditorium at Allen Public Library (300 N. Allen Dr., Allen, TX 75013)</li>
+                                                </ul>
+                                                <h2 class="badge badge-danger">免費入場 Free Admission</h2>
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mQjGg27vPhI" allowfullscreen></iframe>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="card-img-top">
-                                            <a href="Events2019/PuppetShow-6.png" target="_blank">
-                                                <img src="Events2019/PuppetShow-6.png" class="img-responsive rounded mx-auto d-block img-thumbnail" height="500" />
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    </div>
+                                </div>
+                                <div id="activity"></div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2><span class="badge badge-secondary">2019年 228紀念演講會</span></h2>
+                                        <h4><span class="badge badge-dark">『特務、黑道、二二八』</span></h4>
+                                        <ul>
+                                            <li><span class="badge badge-danger">時間</span>：2月22日（星期五）下午7點-10點</li>
+                                            <li><span class="badge badge-dark">地點</span>：逹拉斯台灣基督長老教會Taiwanese Presbyterian Church of Dallas (319 La Salle Dr., Richardson, TX 75081 ) </li>
+                                        </ul>
+                                        <div class="card" style="border:10px solid transparent; padding:15px; border-image: url(Events2019/bg.jpg) 30 round">
+                                            <div class="card-body">
+                                                <p class="lead">今年是二二八事件七十二年，其實長期以來我們對二二八事件的了解非常有限。最近出爐的一些新的檔案，讓我們可以看到更多我們過去所不理解的統治手法。例如，戰後約在1945年9月，最早進到台灣的其實是國民黨政府裏的情治機關，他們部署全台，滲透各地。 利用台灣的黑社會，將他們安排在基層警員跟消防隊裏，甚至在台灣各處安置線民， 監視整個社會。在二二八事件裏，這些特務系統利用事件的發生來剷除台灣社會的精英，甚至在事件之後以新的名義編造黑名單，於是這些人成為被當局監控的對象。  </p>
+                                                <p class="lead">
+                                                    這些新的資料顯示我們對二二八事件的理解其實還非常有限。然而，二二八事件是台灣近代史上犧牲最慘重的事件，這個事件對台灣社會造成什麽樣影響？我們應該更多多理解事件發生的過程，從中獲得一些啟示或教訓。
+                                                    演講中陳敎授會觸及大家非常關心的”轉型正義” 近展。演講會前，現場會播放二二八事件的實况紀錄影片。機會難得，希望同鄉們踴躍參加，以免向隅！
+                                                </p>
+                                                <div class="badge badge-info">關於陳翠蓮教授：</div>
+                                                <img src="Events2019/51781197_2439481959451804_4089931492933763072_n.jpg" class="img-responsive rounded float-md-right" height="200" />
+                                                <div>陳教授現為台灣大學歷史學系教授，曾任自立晚報政治組記者、政治組主任及副總編輯、淡江大學公共行政學系副教授、主任以及政治大學台灣史研究所副教授、教授及所長。陳教授擁有台灣大學政治學系碩士及博士學位，其博士論文研究主題為「二二八事件研究」，她長期致力於二二八事件的真相還原及轉型正義的探討，著作有《派系鬥爭與權謀政治：二二八悲劇的另一面相》、《台灣人的抵抗與認同：一九二O—一九五O》、《百年追求：臺灣民主的故事（卷一 自治的夢想）》以及《重構二二八：戰後美中體制、中國統治模式與臺灣》。</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" id="newboard">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <hr style="height:60px;background: transparent url(Events2019/5cRX6BX7i.png) no-repeat center center; border: 0;" />
+                                                <img src="Events2019/Pw4PFeb55c_small.jpg" class="img-responsive rounded float-md-right" height="200" width="200" />
+                                                <h2 class="card-title"><span class="badge badge-success">2019年 同鄉會理事名單</span></h2>
+                                                <ul>
+                                                    <li><span class="badge badge-primary">會長:</span><span> <b>蔡宇平</b> (Yuping Tsai)</span></li>
+                                                    <li><span class="badge badge-primary">副會長:</span><span> <b>呂維誠</b> (Eric Lu), <b>翁筱玲</b> (Shiny Wu)</span></li>
+                                                    <li><span class="badge badge-primary">文書:</span><span> 周姸吟 (Yen-Ying)</span></li>
+                                                    <li><span class="badge badge-primary">財務:</span><span> 謝美鳳 (Nancy)</span></li>
+                                                    <li><span class="badge badge-primary">網管:</span><span> 顏俊羽 (David)</span></li>
+                                                    <li><span class="badge badge-primary">公關&活動:</span><span> 蔡禮鴻 (Richard), 劉杏芳(Cindy), 黃敬雯 (Jean)</span></li>
+                                                    <li><span class="badge badge-warning">顧問:</span><span> 蔡靜燦 (Sam), 楊麗香 (Leigh), 詹正治 (Raymond), 陳鳳求 (Peggy)</span></li>
+                                                </ul>
+                                                <p class="lead">從今天開始，2018 年的理事們任務完成。再來有關同鄉會的事務及活動將由 2019 年的會長、副會長及理事們負責。我們非常感謝 蔡禮鴻會長在 2018 年的辛勞 ; 也預祝新的理事們，在新任蔡會長宇平的領導下，能成功承傳同鄉會的精神，服務大家；也鼓勵大家時常給予新任理事們支持及加油。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="includedContent"></div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <hr style="height:30px;background: transparent url(Events2019/decorative-line.jpg) no-repeat center center; border: 0;" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <img src="Events2019/new-year-2019.jpg" class="img-responsive rounded float-md-right" height="200" width="200" />
+                                                <h1 class="card-title"><span class="badge badge-danger text-center">2019年農曆新年晚會</span></h1>
+                                                <p class="card-text">親愛的同鄉朋友們：</p>
+                                                <p class="card-text">祝福大家新年快樂、豬事大吉！</p>
+                                                <p class="card-text">達福台灣同鄉會誠摯的邀請各位來參加 <span class="badge badge-danger">2019 年農曆新年晚會</span>！時間為<span class="badge badge-success">二月九日星期六下午五點整</span>，期待大家一起來歡喜團圓，聊天敘舊，享用豐盛美味的年菜，觀賞精彩可期的歌仔戲、說故事等等表演及聆聽耳熟能詳的台灣歌曲演唱，更不要錯過新春開運即時樂抽獎活動，大獎包含華航從洛杉磯到台北的機票及多個現金紅包，只要參加就可得到抽獎券至少一張，人人有機會抽到大獎！當晚無論中獎與否，同鄉會將贈送你（妳）一個 2019新年開運的紅包！</p>
+                                                <h4><span class="badge badge-info">新年晚宴資訊</span></h4>
+                                                <ul>
+                                                    <li><span class="badge badge-danger">時間</span>：2019 年2月9日（星期六)5:00 PM開始報到</li>
+                                                    <li><span class="badge badge-dark">地點</span>：金華燒臘（Golden Joy B.B.Q.)；1475 E. Belt Line Rd., #260, Richardson, TX 75081；Tel: 972-234-2889</li>
+                                                </ul>
+                                                <h4><span class="badge badge-info">餐費</span></h4>
+                                                <ul>
+                                                    <li>會員：<span class="badge badge-danger">$25</span></li>
+                                                    <li>非會員：<span class="badge badge-warning">$35</span></li>
+                                                    <li>學生和6歲以上 12歲以下的小孩：<span class="badge badge-success">$15</span></li>
+                                                    <li>6歲及6歲以下不佔位子：免費 (free)</li>
+                                                    <li>包桌：一桌<span class="badge badge-danger">$300</span>，不論包桌者是會員或非會員，一桌可坐10人，每人可有一張抽獎劵，計10張，請包桌者提早到場領取抽獎劵</li>
+                                                </ul>
+                                                <h4><span class="badge badge-info">同鄉會年費</span></h4>
+                                                <ul>
+                                                    <li>家庭：<span class="badge badge-danger">$20</span></li>
+                                                    <li>單身：<span class="badge badge-success">$10</span></li>
+                                                </ul>
+                                                <h4><span class="badge badge-info">活動</span></h4>
+                                                <ul>
+                                                    <li>5:00 PM–6:00 PM   報到</li>
+                                                    <li>6:00 PM–7:30 PM   晚宴開始</li>
+                                                    <li>7:30 PM–9:00 PM   新年晚會</li>
+                                                </ul>
+                                                <h4><span class="badge badge-info">線上報名</span></h4>
+                                                <p class="card-text"><a href="https://taadfw.wufoo.com/forms/m1g3ro4x1ag3vyz/">請按此</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2><span class="badge badge-success">台心合唱團2018音樂會</span></h2>
+                                        <ul>
+                                            <li><span class="badge badge-danger">時間</span>：9月15日（星期六）下午3點</li>
+                                            <li><span class="badge badge-dark">地點</span>：李察遜第一長老教會 First Presbyterian Church of Richardson (271 Walton Street, Richardson, TX 75081) </li>
+                                        </ul>
+                                        <p>好消息！好消息！台心合唱團睽違三年，即將再次舉辦音樂會！熱情的邀請鄉親們前來聆聽並給予指教！</p>
+                                        <p>睽違已久的台心合唱團在這次精心策劃，慎重的準備下，即將在九月十五日星期六下午三點發表他們辛苦耕耘的成果，借用李察遜第一長老教會的殿堂，帶給聽眾15首臺灣鄉親耳熟能詳的懷舊老歌以及近代作品。</p>
+                                        <p>從1930年代的『<span class="badge badge-success">雨夜花</span>』，唱到1960 年代的『<span class="badge badge-success">夜半路燈</span>』，反映了憂悶鬰卒苦難的民情，然後循序漸進到重獲自由民主後，盼望一缐曙光的怏樂情景歌曲，彷彿帶觀眾走入故鄉台灣的時光隧道。</p>
+                                        <p>台心合唱團的指揮是學有專精的<span class="badge badge-primary">劉杏芳</span>音樂博士，在她訓練嚴謹，但不失淘氣幽默的調敎下，讓台心合唱團有了新的境界，再加上跟著台心一起成長茁壯的伴奏<span class="badge badge-secondary">李家萱</span>小姐的加持下，讓台心合唱團更顯年輕。</p>
+                                        <p>這場公演也精心安排幾位非常傑出的台灣音樂家新秀來表演，有<span class="badge badge-info">周容安</span>博士候選人的女高音獨唱，以及<span class="badge badge-info">周偉倩</span>博士的上低音號獨奏，還有<span class="badge badge-info">李家萱</span>老師的學生帶來的鋼琴四手聯彈，穿插於音樂會節目裡，希望藉由多元化以及活潑的節目安排，呈現多彩多姿，老中青三代一起同台表演的音樂會，讓觀眾們享受一個快樂的下午時光。</p>
+                                        <p>請鄉親們踴躍的捧場這場讓人拭目以待的音樂會。</p>
+                                    </div>
+                                    <div>
+                                        <h2><span class="badge badge-info">演講消息</span></h2>
+                                        <a target="_blank" href="Events2018/Thank God I have a wonderful life[10743].jpg"><img class="card-img-top" style="width:400px;" src="Events2018/Thank God I have a wonderful life[10743].jpg" alt="Card image cap"></a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <iframe style="width: 100%; height: 1300px;" src="Events2018/FreddyLimPressRelease.html"></iframe>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <iframe style="width:100%; height:800px;" src="Events2018/WangConcert.html"></iframe>
+                                    </div>
+                                </div>
+                                <!--<div class="row" style="margin: 10px 0 0 10px">
+                                    <div class="jumbotron" id="newBoard"></div>
+                                </div>-->
+                                <div class="row">
+                                    <div class="col-md-12 d-flex align-items-center">
+                                        <div class="alert alert-success" role="alert">
+                                            <p class="h3">Dallas/Fort Worth - Places to Go, Things to Do and Sights to See</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 d-flex flex-wrap">
+                                        <div class="border">
+                                            <a href="http://dallascityhall.com/Pages/default.aspx">
+                                                <img alt="Dallas Skyline"
+                                                     src="SummerCamp2016/Dallas%20Skyline.png" width="180"
+                                                     height="100" border="0">
                                             </a>
                                         </div>
-                                        <div class="card-body">
-                                            <p class="lead">
-                                                為了尊重並感謝台美人的文化藝術、傳統、以及貢獻，美國國會在1999年，正式訂定每年五月的第三個禮拜，為台灣傳統週。台灣傳統週一直是僑界最備受期待的年度重點活動之一，每年都會從台灣徵選優質的表演團體來美國巡迴演出，巡演期間為期將近一個月，今年達拉斯是其中的一站。
-                                            </p>
-                                            <p class="lead">
-                                                今年邀請到的表演團體為台灣知名的新勝景掌中劇團為2019年台美人傳統週獻上精彩的布袋戲秀！新勝景掌中劇團讓沒落的傳統布袋戲，賦予了新的生命，也因應新世代潮流，他們將傳統的布袋戲與現代的動畫投影結合，並搭配光雕的新科技，設計出史無前例的『光雕投影布袋戲』，堪稱世界首例，劇團更採用了流行動感的搖滾樂，十足的將布袋戲多元化及年輕化，讓布袋戲文化再次活躍。
-                                            </p>
-                                            <p class="lead">
-                                                這次布袋戲的主題『南俠一生傳』，故事起源於武林幫派間的鬥爭打亂了武林之間的平衡，於是南俠挺身而出奔走江湖尋求各方支援，故事劇情就此展開。為了讓聽不懂台語的觀眾以及國際人士都能享受這場布袋戲，舞台會加上中英字幕，讓與會的觀眾了解劇情，劇團人員也將會在演出結束後，與台下觀眾互動，並帶來精緻的布袋戲偶贈與答題的觀眾。相信這場創新的布袋戲，將會帶給觀眾一場在視覺上以及聽覺上的享受。
-                                            </p>
-                                            <ul>
-                                                <li><span class="badge badge-danger">時間</span>：May 5th, 2019 (Sunday) 3:00 PM</li>
-                                                <li><span class="badge badge-dark">地點</span>：Civic Auditorium at Allen Public Library (300 N. Allen Dr., Allen, TX 75013)</li>
-                                            </ul>
-                                            <h2 class="badge badge-danger">免費入場 Free Admission</h2>
-                                            <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/mQjGg27vPhI" allowfullscreen></iframe>
-                                            </div>
+                                        <div class="border">
+                                            <a href="http://www.dwazoo.com/">
+                                                <img alt="Dallas Aquarium"
+                                                     src="SummerCamp2016/Dallas%20Aquarium.jpg" width="134"
+                                                     height="100" border="0">
+                                            </a>
                                         </div>
-                                    </div>
-
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                           </div>
-                        </div>
-                            <div id="activity"></div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h2><span class="badge badge-secondary">2019年 228紀念演講會</span></h2>
-                                    <h4><span class="badge badge-dark">『特務、黑道、二二八』</span></h4>
-                                    <ul>
-                                        <li><span class="badge badge-danger">時間</span>：2月22日（星期五）下午7點-10點</li>
-                                        <li><span class="badge badge-dark">地點</span>：逹拉斯台灣基督長老教會Taiwanese Presbyterian Church of Dallas (319 La Salle Dr., Richardson, TX 75081 ) </li>
-                                    </ul>
-                                    <div class="card" style="border:10px solid transparent; padding:15px; border-image: url(Events2019/bg.jpg) 30 round">
-                                        <div class="card-body">
-                                            <p class="lead">今年是二二八事件七十二年，其實長期以來我們對二二八事件的了解非常有限。最近出爐的一些新的檔案，讓我們可以看到更多我們過去所不理解的統治手法。例如，戰後約在1945年9月，最早進到台灣的其實是國民黨政府裏的情治機關，他們部署全台，滲透各地。 利用台灣的黑社會，將他們安排在基層警員跟消防隊裏，甚至在台灣各處安置線民， 監視整個社會。在二二八事件裏，這些特務系統利用事件的發生來剷除台灣社會的精英，甚至在事件之後以新的名義編造黑名單，於是這些人成為被當局監控的對象。  </p>
-                                            <p class="lead">
-                                                這些新的資料顯示我們對二二八事件的理解其實還非常有限。然而，二二八事件是台灣近代史上犧牲最慘重的事件，這個事件對台灣社會造成什麽樣影響？我們應該更多多理解事件發生的過程，從中獲得一些啟示或教訓。
-                                                演講中陳敎授會觸及大家非常關心的”轉型正義” 近展。演講會前，現場會播放二二八事件的實况紀錄影片。機會難得，希望同鄉們踴躍參加，以免向隅！
-                                            </p>
-                                            <div class="badge badge-info">關於陳翠蓮教授：</div>
-                                            <img src="Events2019/51781197_2439481959451804_4089931492933763072_n.jpg" class="img-responsive rounded float-md-right" height="200" />
-                                            <div>陳教授現為台灣大學歷史學系教授，曾任自立晚報政治組記者、政治組主任及副總編輯、淡江大學公共行政學系副教授、主任以及政治大學台灣史研究所副教授、教授及所長。陳教授擁有台灣大學政治學系碩士及博士學位，其博士論文研究主題為「二二八事件研究」，她長期致力於二二八事件的真相還原及轉型正義的探討，著作有《派系鬥爭與權謀政治：二二八悲劇的另一面相》、《台灣人的抵抗與認同：一九二O—一九五O》、《百年追求：臺灣民主的故事（卷一 自治的夢想）》以及《重構二二八：戰後美中體制、中國統治模式與臺灣》。</div>
+                                        <div class="border">
+                                            <a href="https://www.dma.org/">
+                                                <img alt="Dallas Museum of Art"
+                                                     src="SummerCamp2016/Dallas%20Museum%20of%20Art.jpg"
+                                                     width="100" height="100" border="0">
+                                            </a>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <hr style="height:60px;background: transparent url(Events2019/5cRX6BX7i.png) no-repeat center center; border: 0;" />
-                                            <img src="Events2019/Pw4PFeb55c_small.jpg" class="img-responsive rounded float-md-right" height="200" width="200" />
-                                            <h2 class="card-title"><span class="badge badge-success">2019年 同鄉會理事名單</span></h2>
-                                            <ul>
-                                                <li><span class="badge badge-primary">會長:</span><span> <b>蔡宇平</b> (Yuping Tsai)</span></li>
-                                                <li><span class="badge badge-primary">副會長:</span><span> <b>呂維誠</b> (Eric Lu), <b>翁筱玲</b> (Shiny Wu)</span></li>
-                                                <li><span class="badge badge-primary">文書:</span><span> 周姸吟 (Yen-Ying)</span></li>
-                                                <li><span class="badge badge-primary">財務:</span><span> 謝美鳳 (Nancy)</span></li>
-                                                <li><span class="badge badge-primary">網管:</span><span> 顏俊羽 (David)</span></li>
-                                                <li><span class="badge badge-primary">公關&活動:</span><span> 蔡禮鴻 (Richard), 劉杏芳(Cindy), 黃敬雯 (Jean)</span></li>
-                                                <li><span class="badge badge-warning">顧問:</span><span> 蔡靜燦 (Sam), 楊麗香 (Leigh), 詹正治 (Raymond), 陳鳳求 (Peggy)</span></li>
-                                            </ul>
-                                            <p class="lead">從今天開始，2018 年的理事們任務完成。再來有關同鄉會的事務及活動將由 2019 年的會長、副會長及理事們負責。我們非常感謝 蔡禮鴻會長在 2018 年的辛勞 ; 也預祝新的理事們，在新任蔡會長宇平的領導下，能成功承傳同鄉會的精神，服務大家；也鼓勵大家時常給予新任理事們支持及加油。</p>
+                                        <div class="border">
+                                            <a href="http://www.dallasarboretum.org/">
+                                                <img alt="Dallas Arboretum"
+                                                     src="SummerCamp2016/Dallas%20Arboretum.jpg"
+                                                     width="179" height="100" border="0">
+                                            </a>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="includedContent"></div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <hr style="height:30px;background: transparent url(Events2019/decorative-line.jpg) no-repeat center center; border: 0;" />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <img src="Events2019/new-year-2019.jpg" class="img-responsive rounded float-md-right" height="200" width="200" />
-                                            <h1 class="card-title"><span class="badge badge-danger text-center">2019年農曆新年晚會</span></h1>
-                                            <p class="card-text">親愛的同鄉朋友們：</p>
-                                            <p class="card-text">祝福大家新年快樂、豬事大吉！</p>
-                                            <p class="card-text">達福台灣同鄉會誠摯的邀請各位來參加 <span class="badge badge-danger">2019 年農曆新年晚會</span>！時間為<span class="badge badge-success">二月九日星期六下午五點整</span>，期待大家一起來歡喜團圓，聊天敘舊，享用豐盛美味的年菜，觀賞精彩可期的歌仔戲、說故事等等表演及聆聽耳熟能詳的台灣歌曲演唱，更不要錯過新春開運即時樂抽獎活動，大獎包含華航從洛杉磯到台北的機票及多個現金紅包，只要參加就可得到抽獎券至少一張，人人有機會抽到大獎！當晚無論中獎與否，同鄉會將贈送你（妳）一個 2019新年開運的紅包！</p>
-                                            <h4><span class="badge badge-info">新年晚宴資訊</span></h4>
-                                            <ul>
-                                                <li><span class="badge badge-danger">時間</span>：2019 年2月9日（星期六)5:00 PM開始報到</li>
-                                                <li><span class="badge badge-dark">地點</span>：金華燒臘（Golden Joy B.B.Q.)；1475 E. Belt Line Rd., #260, Richardson, TX 75081；Tel: 972-234-2889</li>
-                                            </ul>
-                                            <h4><span class="badge badge-info">餐費</span></h4>
-                                            <ul>
-                                                <li>會員：<span class="badge badge-danger">$25</span></li>
-                                                <li>非會員：<span class="badge badge-warning">$35</span></li>
-                                                <li>學生和6歲以上 12歲以下的小孩：<span class="badge badge-success">$15</span></li>
-                                                <li>6歲及6歲以下不佔位子：免費 (free)</li>
-                                                <li>包桌：一桌<span class="badge badge-danger">$300</span>，不論包桌者是會員或非會員，一桌可坐10人，每人可有一張抽獎劵，計10張，請包桌者提早到場領取抽獎劵</li>
-                                            </ul>
-                                            <h4><span class="badge badge-info">同鄉會年費</span></h4>
-                                            <ul>
-                                                <li>家庭：<span class="badge badge-danger">$20</span></li>
-                                                <li>單身：<span class="badge badge-success">$10</span></li>
-                                            </ul>
-                                            <h4><span class="badge badge-info">活動</span></h4>
-                                            <ul>
-                                                <li>5:00 PM–6:00 PM   報到</li>
-                                                <li>6:00 PM–7:30 PM   晚宴開始</li>
-                                                <li>7:30 PM–9:00 PM   新年晚會</li>
-                                            </ul>
-                                            <h4><span class="badge badge-info">線上報名</span></h4>
-                                            <p class="card-text"><a href="https://taadfw.wufoo.com/forms/m1g3ro4x1ag3vyz/">請按此</a></p>
+                                        <div class="border">
+                                            <a href="http://www.dart.org/">
+                                                <img alt="DART"
+                                                     src="SummerCamp2016/DART3.jpg" width="162" height="100"
+                                                     border="0">
+                                            </a>
+                                        </div>
+                                        <div class="border">
+                                            <a href="http://www.fairpark.org/">
+                                                <img alt="Big Tex @ Dallas Fair Park"
+                                                     src="SummerCamp2016/Big%20Tex.jpg"
+                                                     width="178" height="100" border="0">
+                                            </a>
+                                        </div>
+                                        <div class="border">
+                                            <a href="http://www.yelp.com/biz/pioneer-plaza-cattle-drive-dallas">
+                                                <img alt="Dallas Pioneer Plaza"
+                                                     src="SummerCamp2016/Long%20Horns.jpg" width="276"
+                                                     height="100" border="0">
+                                            </a>
+                                        </div>
+                                        <div class="border">
+                                            <a href="http://mustangsoflascolinas.com/">
+                                                <img alt="Mustangs of Irving Las Colinas"
+                                                     src="SummerCamp2016/Mustangs.jpg"
+                                                     width="200" height="100" border="0">
+                                            </a>
+                                        </div>
+                                        <div class="border">
+                                            <a href="http://texas.rangers.mlb.com/tex/ballpark/">
+                                                <img alt="Arlington Sports Staduims"
+                                                     src="SummerCamp2016/Sports%20Stadiums.png" width="150"
+                                                     height="100" border="0">
+                                            </a>
+                                        </div>
+                                        <div class="border">
+                                            <a href="https://www.sixflags.com/overtexas">
+                                                <img alt="Six Flags in Arlington"
+                                                     src="SummerCamp2016/Six%20Flags.jpg"
+                                                     width="134" height="100" border="0">
+                                            </a>
+                                        </div>
+                                        <div class="border">
+                                            <a href="http://www.fortworth.com/things-to-do/attractions/fort-worth-water-gardens/">
+                                                <img alt="Fort Worth Water Garden"
+                                                     src="SummerCamp2016/Water%20Garden.jpg" width="150"
+                                                     height="100" border="0">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-7">
-                                    <h2><span class="badge badge-success">台心合唱團2018音樂會</span></h2>
-                                    <ul>
-                                        <li><span class="badge badge-danger">時間</span>：9月15日（星期六）下午3點</li>
-                                        <li><span class="badge badge-dark">地點</span>：李察遜第一長老教會 First Presbyterian Church of Richardson (271 Walton Street, Richardson, TX 75081) </li>
-                                    </ul>
-                                    <p>好消息！好消息！台心合唱團睽違三年，即將再次舉辦音樂會！熱情的邀請鄉親們前來聆聽並給予指教！</p>
-                                    <p>睽違已久的台心合唱團在這次精心策劃，慎重的準備下，即將在九月十五日星期六下午三點發表他們辛苦耕耘的成果，借用李察遜第一長老教會的殿堂，帶給聽眾15首臺灣鄉親耳熟能詳的懷舊老歌以及近代作品。</p>
-                                    <p>從1930年代的『<span class="badge badge-success">雨夜花</span>』，唱到1960 年代的『<span class="badge badge-success">夜半路燈</span>』，反映了憂悶鬰卒苦難的民情，然後循序漸進到重獲自由民主後，盼望一缐曙光的怏樂情景歌曲，彷彿帶觀眾走入故鄉台灣的時光隧道。</p>
-                                    <p>台心合唱團的指揮是學有專精的<span class="badge badge-primary">劉杏芳</span>音樂博士，在她訓練嚴謹，但不失淘氣幽默的調敎下，讓台心合唱團有了新的境界，再加上跟著台心一起成長茁壯的伴奏<span class="badge badge-secondary">李家萱</span>小姐的加持下，讓台心合唱團更顯年輕。</p>
-                                    <p>這場公演也精心安排幾位非常傑出的台灣音樂家新秀來表演，有<span class="badge badge-info">周容安</span>博士候選人的女高音獨唱，以及<span class="badge badge-info">周偉倩</span>博士的上低音號獨奏，還有<span class="badge badge-info">李家萱</span>老師的學生帶來的鋼琴四手聯彈，穿插於音樂會節目裡，希望藉由多元化以及活潑的節目安排，呈現多彩多姿，老中青三代一起同台表演的音樂會，讓觀眾們享受一個快樂的下午時光。</p>
-                                    <p>請鄉親們踴躍的捧場這場讓人拭目以待的音樂會。</p>
-                                </div>
-                                <div>
-                                    <h2><span class="badge badge-info">演講消息</span></h2>
-                                    <a target="_blank" href="Events2018/Thank God I have a wonderful life[10743].jpg"><img class="card-img-top" style="width:400px;" src="Events2018/Thank God I have a wonderful life[10743].jpg" alt="Card image cap"></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <iframe style="width:100%; height:1300px;" src="Events2018/FreddyLimPressRelease.html"></iframe>
-                            </div>
-                            <div class="row">
-                                <iframe style="width:100%; height:800px;" src="Events2018/WangConcert.html"></iframe>
-                            </div>
-                            <!--<div class="row" style="margin: 10px 0 0 10px">
-                                <div class="jumbotron" id="newBoard"></div>
-                            </div>-->
-                            <div class="row">
-                                <div class="col-md-12 d-flex align-items-center">
-                                    <div class="alert alert-success" role="alert">
-                                        <p class="h3">Dallas/Fort Worth - Places to Go, Things to Do and Sights to See</p>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <p class="h5">© 2018 全美台灣同鄉會達拉斯分會. All rights reserved.</p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 d-flex flex-wrap">
-                                    <div class="border">
-                                        <a href="http://dallascityhall.com/Pages/default.aspx">
-                                            <img alt="Dallas Skyline"
-                                                 src="SummerCamp2016/Dallas%20Skyline.png" width="180"
-                                                 height="100" border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="http://www.dwazoo.com/">
-                                            <img alt="Dallas Aquarium"
-                                                 src="SummerCamp2016/Dallas%20Aquarium.jpg" width="134"
-                                                 height="100" border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="https://www.dma.org/">
-                                            <img alt="Dallas Museum of Art"
-                                                 src="SummerCamp2016/Dallas%20Museum%20of%20Art.jpg"
-                                                 width="100" height="100" border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="http://www.dallasarboretum.org/">
-                                            <img alt="Dallas Arboretum"
-                                                 src="SummerCamp2016/Dallas%20Arboretum.jpg"
-                                                 width="179" height="100" border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="http://www.dart.org/">
-                                            <img alt="DART"
-                                                 src="SummerCamp2016/DART3.jpg" width="162" height="100"
-                                                 border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="http://www.fairpark.org/">
-                                            <img alt="Big Tex @ Dallas Fair Park"
-                                                 src="SummerCamp2016/Big%20Tex.jpg"
-                                                 width="178" height="100" border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="http://www.yelp.com/biz/pioneer-plaza-cattle-drive-dallas">
-                                            <img alt="Dallas Pioneer Plaza"
-                                                 src="SummerCamp2016/Long%20Horns.jpg" width="276"
-                                                 height="100" border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="http://mustangsoflascolinas.com/">
-                                            <img alt="Mustangs of Irving Las Colinas"
-                                                 src="SummerCamp2016/Mustangs.jpg"
-                                                 width="200" height="100" border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="http://texas.rangers.mlb.com/tex/ballpark/">
-                                            <img alt="Arlington Sports Staduims"
-                                                 src="SummerCamp2016/Sports%20Stadiums.png" width="150"
-                                                 height="100" border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="https://www.sixflags.com/overtexas">
-                                            <img alt="Six Flags in Arlington"
-                                                 src="SummerCamp2016/Six%20Flags.jpg"
-                                                 width="134" height="100" border="0">
-                                        </a>
-                                    </div>
-                                    <div class="border">
-                                        <a href="http://www.fortworth.com/things-to-do/attractions/fort-worth-water-gardens/">
-                                            <img alt="Fort Worth Water Garden"
-                                                 src="SummerCamp2016/Water%20Garden.jpg" width="150"
-                                                 height="100" border="0">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="row">
-                                <div class="col-md-12 text-center">
-                                    <p class="h5">© 2018 全美台灣同鄉會達拉斯分會. All rights reserved.</p>
                                 </div>
                             </div>
                         </div>
@@ -590,5 +621,75 @@
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div id="presidentList" class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">歴屆會長</h5>
+                    <button type="button" class="sort btn btn-outline-primary" data-sort="year" style="margin-left: 5px;">
+                        Sort by year
+                    </button>
+                    <button type="button" class="sort btn btn-outline-success" data-sort="name">
+                        Sort by name
+                    </button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol class="list">
+                        <li><span class="year">1974</span><p class="name">陳善同先生 (Chen, Shan T)</p></li>
+                        <li><span class="year">1975</span><p class="name">林昭光先生 (Lin, J K)</p></li>
+                        <li><span class="year">1976</span><p class="name">謝英敏先生 (Shieh, Edward)</p></li>
+                        <li><span class="year">1977</span><p class="name">湯俊彥先生 (Tang, J Y )</p></li>
+                        <li><span class="year">1978</span><p class="name">林宗義先生 (Lin, George)</p></li>
+                        <li><span class="year">1979</span><p class="name">謝慶鏘先生 (Hsieh, John)</p></li>
+                        <li><span class="year">1980</span><p class="name">蘇孝源先生 (Su, Shiaw)</p></li>
+                        <li><span class="year">1981</span><p class="name">蔡靜輝先生 (Tsay, Jeff)</p></li>
+                        <li><span class="year">1982</span><p class="name">張義茂先生 (Chang, Yi-Maw)</p></li>
+                        <li><span class="year">1983</span><p class="name">葉鴻振先生 (Yeh, H C)</p></li>
+                        <li><span class="year">1984</span><p class="name">林國亮先生 (Lin, K L)</p></li>
+                        <li><span class="year">1985</span><p class="name">蔡靜煌先生 (Tsay, Patrick)</p></li>
+                        <li><span class="year">1986</span><p class="name">林又新先生 (Lin, Y T)</p></li>
+                        <li><span class="year">1987</span><p class="name">吳明基先生 (Wu, M C)</p></li>
+                        <li><span class="year">1988</span><p class="name">王明珠女士 (Wang Pearl)</p></li>
+                        <li><span class="year">1989</span><p class="name">陳文英女士 (Chen,W Y)</p></li>
+                        <li><span class="year">1990</span><p class="name">蕭慶和先生 (Shaw, C H)</p></li>
+                        <li><span class="year">1991</span><p class="name">詹文聲先生 (Chan, Wen)</p></li>
+                        <li><span class="year">1992</span><p class="name">莊樹源先生 (Chuang, S Y)</p></li>
+                        <li><span class="year">1993</span><p class="name">劉榮吉先生 (Liu, John J)</p></li>
+                        <li><span class="year">1994</span><p class="name">蔡靜輝先生 (Tsay, Jeff)</p></li>
+                        <li><span class="year">1995</span><p class="name">吳明基先生 (Wu, M C)</p></li>
+                        <li><span class="year">1996</span><p class="name">張成業先生 (Chang, C Y)</p></li>
+                        <li><span class="year">1997</span><p class="name">葉寶桂女士 (Tsay, Nora)</p></li>
+                        <li><span class="year">1998</span><p class="name">溫惠蘭女士 (Lin, Helen)</p></li>
+                        <li><span class="year">1999</span><p class="name">詹繍香女士 (Yang, Sue)</p></li>
+                        <li><span class="year">2000</span><p class="name">謝慶鏘先生 (Hsieh, John)</p></li>
+                        <li><span class="year">2001</span><p class="name">林國亮先生 (Lin, K L)</p></li>
+                        <li><span class="year">2002</span><p class="name">詹文聲先生 (Chan, Wen)</p></li>
+                        <li><span class="year">2003</span><p class="name">張義茂先生 (Chang, Yi-Maw)</p></li>
+                        <li><span class="year">2004</span><p class="name">葉鴻振先生 (Yeh, H C)</p></li>
+                        <li><span class="year">2005</span><p class="name">王天惠先生 (Wang, Charles)</p></li>
+                        <li><span class="year">2006</span><p class="name">楊金文先生 (Yang, Kim)</p></li>
+                        <li><span class="year">2007</span><p class="name">李紫鳳女士 (Chang, Sue)</p></li>
+                        <li><span class="year">2008</span><p class="name">盧永華女士 (Chan, Y H)</p></li>
+                        <li><span class="year">2009</span><p class="name">李富麗女士 (Chen, Grace)</p></li>
+                        <li><span class="year">2010</span><p class="name">鄭忠傳先生 (Cheng, Andrew)</p></li>
+                        <li><span class="year">2011</span><p class="name">葉寶桂女士 (Tsay, Nora)</p></li>
+                        <li><span class="year">2012</span><p class="name">詹正治先生 (Jan, Raymond J)</p></li>
+                        <li><span class="year">2013</span><p class="name">顏俊羽先生 (Yen, David)</p></li>
+                        <li><span class="year">2014</span><p class="name">蘇嘉偉先生 (Su, Steven)</p></li>
+                        <li><span class="year">2015</span><p class="name">劉杏芳女士 (Liu, Cindy)</p></li>
+                        <li><span class="year">2016</span><p class="name">黃子偉先生 (Hwang, Alex)</p></li>
+                        <li><span class="year">2017</span><p class="name">陳玉茹女士 (Chen, Y J)</p></li>
+                        <li><span class="year">2018</span><p class="name">蔡禮鴻先生 (Tsai, Li-Hung)</p></li>
+                        <li><span class="year">2019</span><p class="name">蔡宇平先生 (Tsai. Y P)</p></li>
+                    </ol>
+                </div>                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
