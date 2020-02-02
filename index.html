@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/twicon.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
     <script>
@@ -20,6 +21,7 @@
 
             var options = { valueNames: ['year', 'name'] };
             var presidentList = new List('presidentList', options);
+            $('#currentYear').text(new Date().getFullYear());
         });
     </script>
     <style>
@@ -224,9 +226,53 @@
                             <h2 class="card-title text-center align-center">Recent Activities <span class="badge badge-success">近期活動</span></h2>
                         </div>
                             <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-title text-center" style="overflow-wrap:break-word;">
+                                            <p class="lead">
+                                                <span class="badge badge-danger">2020年度美國人口普查 <wbr>填寫「台灣人」活動</span>
+                                                <span class="badge badge-info">CENSUS 2020 <wbr>“WRITE-IN TAIWANESE” CAMPAIGN</span>
+                                            </p>
+                                        </div>
+                                        <div class="card-body">
+                                            <h4>This Is Who We Are. Make It Count - Write In Taiwanese 2020 Census</h4>
+                                            <p class="lead">This Write In "Taiwanese" Campaign for the 2020 Census Video is presented by TACL. In this video, we showcase Taiwanese and Taiwanese Americans, of different generations, walks of life, and immigration status, who talk about their pride in their Taiwanese heritage.</p>
+                                            <p class="lead">For more information about the campaign please go to -</p>
+                                            <span class="badge badge-success">Our Campaign Links:</span>
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item"><span class="badge badge-primary">For English</span>: <a href="http://tacl.org/census-2020/?fbclid=IwAR0k3PHDzAXWrhhBP6GDYjZuKS0Hr6kBTDuRiNpFW0q-DrO8_4gHkcoKz9A">tacl.org/census-2020</a></li>
+                                                <li class="list-group-item"><span class="badge badge-secondary">For Mandarin</span>: <a href="https://tacl.org/tacl/get-involved/census-2020-write-in-taiwanese-campaign/?fbclid=IwAR0SqY-UhE9SWvB9TmKgMvkp0qa5K8wKiFqPVWU-7x9sjR3OusAkB3PdQIk">tinyurl.com/counta2020</a></li>
+                                                <li class="list-group-item"><span class="badge badge-info">Campaign Store</span>: <a href="https://www.bonfire.com/store/counta-write-in-taiwanese/">here</a></li>
+                                                <li class="list-group-item"><span class="badge badge-warning">Facebook and Instagram Handle</span> @write.in.taiwanese.census</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="embed-responsive embed-responsive-12by9"> 
+                                                <iframe width="560" height="315" src="http://www.youtube.com/embed/sN7wo0-Anww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-title text-center" style="overflow-wrap:break-word;">
+                                            <p class="lead">請支持，並轉傳給朋友！ </p>
+                                            <p class="lead">🌍1/30在美國白宮的聯署網站發起要美國對幫助台灣加入WHO採取行動。30天內有10萬人聯署，美國政府就得針對聯署內容回應。請大家幫忙聯署並轉傳！！</p>
+                                            <p class="lead">🌺你不用是美國人才能聯署，但請注意，填了姓、名及電子信箱後，會收到一封電子郵件，在那個郵件上點開確認的超連結才會成為有效聯署。</p>
+                                            <a href="https://petitions.whitehouse.gov/petition/take-actions-supporting-taiwan-joining-who?fbclid=IwAR19jiQpG4WR0UABJSr3JOfOagnS8Tojv55Qn_v4Gb5VLqAXkhNmPvqudEY">Link</a>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="embed-responsive">
+                                                <iframe width="560" height="315" src="http://petitions.whitehouse.gov/petition/take-actions-supporting-taiwan-joining-who?fbclid=IwAR19jiQpG4WR0UABJSr3JOfOagnS8Tojv55Qn_v4Gb5VLqAXkhNmPvqudEY"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-12">
                                     <div class="card">
-                                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                             <div class="carousel-inner">
                                               <div class="carousel-item active">
                                                   <img src="Events2020/taiwan-nye.jpg" class="d-block w-100" alt="...">
@@ -261,12 +307,12 @@
                                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                 <span class="sr-only">Next</span>
                                               </a>
-                                          </div>
+                                          </div> -->
                                         <!-- <img class="card-img-top" src="Events2020/taiwan-nye.jpg" style="opacity:1; width: 100%;" /> -->
                                         
                                             <div class="card-title text-center" style="overflow-wrap:break-word;">
-                                                <h5><span class="badge badge-success">新年快樂 鼠年行大運 好運旺旺來</span></h5>
-                                                <h5><span class="badge badge-danger">2020 Lunar New Year Banquet</span></h5>
+                                                <h5><span class="badge badge-success">新年快樂 <wbr>鼠年行大運 <wbr>好運旺旺來</span></h5>
+                                                <h5><span class="badge badge-danger">2020 Lunar New Year <wbr>Banquet</span></h5>
                                             </div>
                                             <div class="card-body">
                                                 <p class="lead">祝福大家新年快樂、鼠年行大運！</p>
@@ -810,7 +856,7 @@
                             <div class="card-footer">
                                 <div class="row">
                                     <div class="col-md-12 text-center">
-                                        <p class="h5">© 2018 全美台灣同鄉會達拉斯分會. All rights reserved.</p>
+                                        <p class="h5">© <span id="currentYear"></span> 全美台灣同鄉會達拉斯分會. All rights reserved.</p>
                                     </div>
                                 </div>
                             </div>
